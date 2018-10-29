@@ -35,17 +35,17 @@ class MainActivity : AppCompatActivity() {
 
     private fun initItems() {
 
-        for (n in 1..100) {
+        for (n in 1..12) {
 
-            val color = when (n % 4) {
-                0 -> Color.CYAN
-                1 -> Color.DKGRAY
-                2 -> Color.GRAY
-                3 -> Color.MAGENTA
+            val photoRes = when (n % 4) {
+                0 -> R.drawable.photo_0
+                1 -> R.drawable.photo_1
+                2 -> R.drawable.photo_2
+                3 -> R.drawable.photo_3
                 else -> Color.TRANSPARENT
             }
 
-            items.add(MyItem("$n", color))
+            items.add(MyItem("Demo$n", photoRes))
         }
     }
 }

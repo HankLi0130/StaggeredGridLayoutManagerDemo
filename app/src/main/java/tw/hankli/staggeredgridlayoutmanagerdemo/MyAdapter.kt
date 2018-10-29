@@ -22,8 +22,8 @@ class MyAdapter(val items: List<MyItem>) : RecyclerView.Adapter<MyAdapter.ViewHo
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(item: MyItem) {
+            itemView.view_img.setImageResource(item.photoRes)
             itemView.view_item_title.text = item.title
-            itemView.setBackgroundColor(item.backgroundColor)
         }
     }
 }
